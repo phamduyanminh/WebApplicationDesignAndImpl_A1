@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+</head>
+<body>
+<h1>Select your option</h1>
+<br>
+<form action="rockPapperScissors" method="post" th:action="@{/processInput}">
+    <input type="radio" name="rock" value="0">
+    <label>ROCK</label>
+    <br>
+    <input type="radio" name="papper" value="1">
+    <label>PAPPER</label>
+    <br>
+    <input type="radio" name="papper" value="2">
+    <label>SCISSORS</label>
+</form>
+</body>
+</html>
