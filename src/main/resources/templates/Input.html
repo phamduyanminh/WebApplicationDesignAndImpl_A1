@@ -7,17 +7,21 @@
 <body>
 <h1>Select your option</h1>
 <br>
-<form action="rockPapperScissors" method="post" th:action="@{/processInput}">
-    <input type="radio" name="rock" value="0">
-    <label>ROCK</label>
+<form method="post" th:action="@{/processInput}" th:object="${user}">
+    <div>
+        <input type="radio" id="0" name="option" value="0" th:field="*{option}">
+        <label for="0">ROCK</label>
+    </div>
+    <div>
+        <input type="radio" id="1" name="option" value="1" th:field="*{option}">
+        <label for="1">PAPPER</label>
+    </div>
+    <div>
+        <input type="radio" id="2" name="option" value="2" th:field="*{option}">
+        <label for="2">SCISSORS</label>
+    </div>
     <br>
-    <input type="radio" name="papper" value="1">
-    <label>PAPPER</label>
-    <br>
-    <input type="radio" name="scissors" value="2">
-    <label>SCISSORS</label>
+    <button type="submit">Play</button>
 </form>
-<br>
-<input type="submit">
 </body>
 </html>

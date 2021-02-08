@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Output</title>
 </head>
 <body>
-<button type="button">Play again</button>
+<div th:text="${rps.gameResult()}">
+    <p>Result</p>
+</div>
+<div th:object="${rps}">
+    <p th:text="'User: ' + ${rps.computerList[rps.getUserChoice()]}">USER</p>
+    <p th:text="'Computer: ' + ${rps.computerList[rps.getCompRand()]}">USER</p>
+</div>
+<br>
+<button onclick="history.back()" type="button">Play again</button>
 </body>
 </html>
